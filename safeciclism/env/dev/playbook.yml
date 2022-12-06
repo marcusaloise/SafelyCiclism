@@ -1,0 +1,19 @@
+- hosts: terraform_ansible
+  tasks:
+
+    - name: apt-get update
+      apt:
+        update_cache: yes
+      become: yes
+
+    - name: ficando no diretorio correto
+      shell: "cd /home/ubuntu"  
+
+    - name: clone a github repository
+      git:
+        repo: https://github.com/marcusaloise/SafeCiclism.git
+        dest: /home/ubuntu/repo
+        clone: yes
+        update: yes
+    - name: criando o servidor
+      shell: "cd /home/ubuntu/repo/safeciclism && nohup busybox httpd -f -p 8080 &"

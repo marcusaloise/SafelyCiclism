@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet"  href="{{ url_for('static', filename= 'css/swiper-bundle.min.css') }}">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+
+    <link rel="icon" href="{{ url_for('static', filename= 'img/bike.jpeg') }}">
+
+    <title>Safely Ciclism</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                Safely Ciclism
+            </a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link ">
+                            <i class='bx bx-home-alt-2'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#popular" class="nav__link">
+                            <i class='bx bx-body'></i>
+                            <span>Ciclismo</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#denuncia" class="nav__link">
+                            <i class='bx bxs-bar-chart-square'></i>
+                            <span>Noticias</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#value" class="nav__link">
+                            <i class='bx bx-award'></i>
+                            <span>Oficinas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-phone'></i>
+                            <span>Contato</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+
+            <!-- <a href="#" class="button nav__button">
+                    Subscribe
+                </a> -->
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Safely Ciclism
+                    </h1>
+                    <p class="home__description">
+                        
+                    </p>
+
+
+
+
+                </div>
+
+                <div class="home__images">
+
+                    <div class="home__orbe"></div>
+
+                    <div class="home__img">
+                        <img src="{{ url_for('static', filename= 'img/bike3.png') }}" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--==================== POPULAR ====================-->
+        <section class="popular section" id="popular">
+            <div class="container">
+                <span class="section__subtitle">Interessante!</span>
+
+                <h1 class="section__title">
+                    Tipos de ciclismo<span>.</span>
+                </h1>
+                <div class="popular__container swiper">
+                    <div class="swiper-wrapper">
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/destrada.jpeg') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    Ciclismo de estrada
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+                                    Compõe-se de provas longas e como o próprio nome diz, realizadas nas estradas. Uma
+                                    prova, mesmo que penosa,
+                                    os atletas são agraciados pelas belas paisagens no caminho. A resistência, sem
+                                    sombra de dúvida,
+                                    destaca-se como fundamental nas disputas de corrida e contrarrelógio.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/bmx.webp') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    Ciclismo de pista
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+
+                                    A base do Ciclismo de Pista é pura explosão e adrenalina, isso porque as bicicletas
+                                    não possuem freios e para para-las os atletas diminuem a velocidade através dos
+                                    pedais.
+                                    Com apenas uma marcha e a obrigatoriedade do uso do capacete aerodinâmicos,
+                                    compõem-se os
+                                    fatores necessários para evitarem acidentes entre os atletas e garantirem grandes
+                                    acelerações.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/Demontainha.jpeg') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    Mountain bike
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+                                    Mountain Bike é um tipo de ciclismo voltado para as montanhas e para ambientes com
+                                    terrenos irregulares,
+                                    como terra, neve e areia.Podemos dizer que essa modalidade nasceu há mais de 60
+                                    anos: seu surgimento data
+                                    da década de 1950, na Califórnia. Ali, muitos ciclistas buscavam ambientes
+                                    diferentes para suas pedaladas e,
+                                    assim, surgiram as primeiras competições.O termo também é usado para se referir à
+                                    bicicleta Mountain Bike,
+                                    utilizada para a prática do ciclismos nestes terrenos.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/dePista.jpeg') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    BMX
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+                                    A palavra BMX tem como significado Bicycle (B) Moto (M) Cross (X).O Free Style
+                                    existe desde a década de 70
+                                    e foi inventado nos Estados Unidos As crianças imitavam seus ídolos do motocross com
+                                    suas bikes,
+                                    construíam pistas e faziam corridas informais. Assim nascia um novo esporte com o
+                                    apoio e o incentivo dos pais da criançada.
+                                    O BMX chegou com toda a sua força no Brasil em 1978, quando o bicicross estava
+                                    crescendo, dando espaço a esse novo esporte radical.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/Dowdwo.webp') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    Downhill
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+                                    Dowhill é uma modalidade do mountain bike que consiste em descer, com a maior
+                                    velocidade possível,
+                                    um percurso com diversos obstáculos e irregularidades ou uma montanha.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/gravel.jpeg') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    Gravel
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+                                    É que a principal característica da modalidade é mesclar diferentes tipos de
+                                    terreno.
+                                    Assim, uma Bicicleta Gravel, que também é conhecida como bicicleta para estrada de
+                                    cascalho,
+                                    é projetada para rodar bem em estradas em qualquer condição, seja asfalto, estrada
+                                    de terra batida ou cascalho.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="popular__card swiper-slide">
+                            <img src="{{ url_for('static', filename= 'img/trialbijke.jpeg') }}" alt="" class="popular__image">
+
+                            <div class="popular__data">
+                                <h2 class="popular__price">
+                                    Trial
+                                </h2>
+
+                                <h3 class="popular__title">
+                                    <span>---------</span>
+                                </h3>
+
+                                <p class="popular__description">
+                                    O Bike trial é um esporte cujo objectivo é ultrapassar obstáculos, tanto naturais
+                                    quanto artificiais.
+                                    É uma modalidade do ciclismo derivada do trial de motocicleta. Pratica-se em
+                                    bicicletas aro 20,24 e 26,
+                                    e deve-se passar pelos obstáculos sem ter contato físico (pés, mãos) com ele.
+
+                                    <br>
+
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class='bx bx-chevron-left'></i>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==================== POPULAR ====================-->
+        <section class="logos section container" id="denuncia">
+            <span class="section__subtitle">Atenção!!!</span>
+            <h1 class="section__title">Algumas noticias sobre o mundo do ciclismo</h1>
+            <div class="div logos__container container grid ">
+
+
+                <p class="color01 popular__description container">
+                    <a
+                        href="https://sportbuzz.uol.com.br/noticias/ciclismo/tour-de-france-tem-13-penalizacoes-nas-primeiras-tres-etapas.phtml">
+                        https://sportbuzz.uol.com.br/noticias/ciclismo/tour-de-france-tem-13-penalizacoes-nas-primeiras-tres-etapas.phtml</a>
+                </p>
+                <p class="color01 popular__description container">
+                    <a
+                        href="https://odia.ig.com.br/esporte/2022/06/6428728-maior-prova-de-ciclismo-da-america-latina-sera-neste-fim-de-semana-no-rio.html">
+                        https://odia.ig.com.br/esporte/2022/06/6428728-maior-prova-de-ciclismo-da-america-latina-sera-neste-fim-de-semana-no-rio.html
+                    </a>
+                </p>
+                <p class="color01 popular__description container">
+                    <a
+                        href="https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/lygia-azevedo/entre-lazer-e-esporte-ciclismo-cresce-em-fortaleza-confira-como-iniciar-na-modalidade-1.3248018">https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/lygia-azevedo/entre-lazer-e-esporte-ciclismo-cresce-em-fortaleza-confira-como-iniciar-na-modalidade-1.3248018</a>
+                </p>
+                <p class="color01 popular__description container">
+                    <a
+                        href="https://www.publico.pt/2022/07/03/desporto/noticia/ciclista-daniela-campos-bastante-feliz-prata-jogos-mediterraneo-2012318">https://www.publico.pt/2022/07/03/desporto/noticia/ciclista-daniela-campos-bastante-feliz-prata-jogos-mediterraneo-2012318</a>
+                </p>
+            </div>
+        </section>
+
+
+        <!--==================== LOGOS ====================-->
+        <section class="logos section container">
+            <span class="section__subtitle">IMPORTANTE!!</span>
+            <h1 class="section__title">Saúde, Esporte e Lazer!!!</h1>
+            <div class="div logos__container container grid">
+
+
+                <p class="color01 popular__description container color01">
+                    Atualmente podemos observar que o uso da bicicleta vem crescendo cada vez mais nas cidades como meio de transporte e de lazer. <br>
+                    Os estímulos para pedalar aparecem por vários motivos. Um deles é que a bicicleta proporciona ao corpo humano uma melhora na qualidade de vida. Motivos para pedalar não faltam, mas é necessário saber que, mesmo utilizando a “bike” poucas vezes durante a semana, os benefícios já começam a aparecer: emagrecimento, aceleração do metabolismo, queima de calorias, dentre outros e com isso, evita-se acúmulo de gordura, havendo também uma melhora significativa na resistência muscular.
+Porém, um dos maiores benefícios do ciclismo é que o mesmo trabalha quase todos os grupos musculares do corpo humano, desenvolvendo assim bem-estar, aumento de fôlego, baixo impacto nas articulações, redução do colesterol, controle da glicemia e pressão arterial. Pesquisas constatam que os efeitos positivos se estendem também ao sistema imunológico, fortalecendo-o e ajudando a prevenir e/ou frear ataques de vírus e bactérias. Mas tudo isso é um conjunto de fatores. A escolha correta da bicicleta neste caso é fundamental para que você não sofra consequências negativas: o tamanho da mesma e sua perfeita regulagem são itens essenciais para a boa prática.
+Portanto, é fundamental que você converse com um profissional antes de iniciar a atividade. “Garanto que ao andar de bike você será outra pessoa, com novos ciclos de amizade e também, engajado com o meio-ambiente”, ressaltou Luiz Antônio.
+Conseguinte, é fundamental que você converse com um profissional antes de iniciar a atividade, no entanto, para ter o efeito desejado é necessário pedalar com certa frequência. “Para condicionar, o ideal é pedalar no mínimo 2 vezes por semana, pelo menos 30 minutos a cada dia. Caso você tenha mais disposição, pedale de 4 a 5 vezes por semana, 1 hora cada dia”. Assim como toda atividade física, andar de bicicleta também requer cuidados específicos. É preciso consultar um médico para analisar as funções cardíacas. Vale lembrar a importância de usar sempre o protetor solar, beber muita água e não usar fones de ouvido, caso vá pedalar na rua, pois tira a atenção e pode causar acidentes.
+ 
+Também conhecido por “Cacá”, Luiz Antônio Scopel (“fotos”) tem 40 anos, é personal trainer – CREF 012259/SC, nascido e residente em Orleans. Pedala já tem aproximadamente 15 anos, tendo participado inclusive de campeonatos brasileiros, catarinenses, gaúchos, goianos e muitos outros. Dentre alguns títulos e premiações, foi campeão da 1ª edição do Desafio Serra do Rio do Rastro/SC, campeão da Volta de Goiás por equipe, do Desafio do Contra-relógio em Novo Hamburgo/RS, além de um 8º lugar no Brasileiro no contra-relógio.
+Mais informações acerca do ciclismo e de sua atividade profissional no número 48-999845760 (WhatsApp) e e-mail: cacaciclista@hotmail.com
+Por: Rodolfo Devilla!
+
+                </p>
+            </div>
+        </section>
+
+
+        <!--==================== VALUE ====================-->
+        <section class="value section" id="value">
+            <div class="value__container container grid">
+                <div class="value__content">
+                    <div class="value__data">
+                        <span class="section__subtitle">Dicas!</span>
+
+                        <h2 class="section__title">
+                            Melhores Oficinas de Bike<span>.</span>
+                        </h2>
+
+                    </div>
+
+                    <div class="value__accordadion">
+
+                        <div class="value__accordadion-item">
+
+                            <header class="value__accordadion-header">
+                                <i class='bx bx-certification value__accordadion-icon'></i>
+                                <h3 class="value__accordadion-title ">
+                                    Duas Rodas Bicicletaria
+                                </h3>
+                                <div class="value__accordadion-arrow">
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordadion-content">
+                                <p class="value__accordadion--description">
+                                    Av. Calama, 4069 - Embratel, Porto Velho - RO, 76820-739
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="value__accordadion-item">
+                            <header class="value__accordadion-header">
+                                <i class='bx bx-certification value__accordadion-icon'></i>
+                                <h3 class="value__accordadion-title">
+                                    MOOVE BIKE STORE
+                                </h3>
+                                <div class="value__accordadion-arrow">
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordadion-content">
+                                <p class="value__accordadion--description">
+                                    Rua Elias Gorayeb.º 2291 - Liberdade, Porto Velho - RO, 76803-894
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="value__accordadion-item">
+                            <header class="value__accordadion-header">
+                                <i class='bx bx-certification value__accordadion-icon'></i>
+                                <h3 class="value__accordadion-title">
+                                    Rondobikes
+                                </h3>
+                                <div class="value__accordadion-arrow">
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordadion-content">
+                                <p class="value__accordadion--description">
+                                    Av. Amazonas, 1613 - Nossa Sra. das Graças, Porto Velho - RO, 76804-159
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="value__accordadion-item">
+                            <header class="value__accordadion-header">
+                                <i class='bx bx-certification value__accordadion-icon'></i>
+                                <h3 class="value__accordadion-title">
+                                    RV Bikes
+                                </h3>
+                                <div class="value__accordadion-arrow">
+                                    <i class='bx bxs-down-arrow'></i>
+                                </div>
+                            </header>
+
+                            <div class="value__accordadion-content">
+                                <p class="value__accordadion--description">
+                                    R. Tancredo Neves, 3655 - Caladinho, Porto Velho - RO, 76808-118
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section" id="contact">
+            <div class="contact__container container grid">
+
+                <!-- <div class="contact__images">
+                        <div class="contact__orbe"></div>
+
+                        <div class="contact__img">
+                            <img src="assets/img/contact.png" alt="">
+                        </div>
+                    </div> -->
+
+                <div class="contact__content">
+
+                    <div class="contatc__data">
+                        <span class="section__subtitle">
+                            Interressado ?
+                        </span>
+                        <h2 class="section__title">
+                            Faça um contato!
+                        </h2>
+                        <p class="contact__description">
+                           Faça sua denuncia relacionada ao mundo do pedal através dos contatos abaixo
+                        </p>
+                    </div>
+
+
+                    <div class="contact__card">
+
+
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bxl-instagram'></i>
+                                <div class="contact__linkedin">
+                                    <h3 class="contact__card-title">
+                                        Instagram<span>:</span>
+
+                                    </h3>
+                                    <p class="contact__card-description">
+                                        <a
+                                            href="https://www.instagram.com/safely.ciclism/"><span>@safelyciclism</span></a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bxl-gmail'></i>
+                                <div>
+                                    <h3 class="contact__card-title">
+                                        Email<span>:</span>
+
+                                    </h3>
+                                    <p class="contact__card-description">
+                                        safelyciclism@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bxl-whatsapp'></i>
+                                <div>
+                                    <h3 class="contact__card-title">
+                                        WhatsApp<span>:</span>
+
+                                    </h3>
+                                    <p class="contact__card-description">
+                                        (69) 9.9999-9999
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bx-phone'></i>
+                                <div>
+                                    <h3 class="contact__card-title">
+                                        Celular<span>:</span>
+
+                                    </h3>
+                                    <p class="contact__card-description">
+                                        (69) 9.9999-9999
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__card-box">
+                            <div class="contact__card-info">
+                                <i class='bx bx-phone'></i>
+                                <div>
+
+                                    <form method="post">
+
+                                        <h2>Mande uma mensagem</h2>
+
+                                        <label for="date">Data:</label>
+                                        <input type="date" name="date" value="">
+
+                                        <br>
+
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="email" value="">
+
+                                        <br>
+
+                                        <label for="name">Nome:</label>
+                                        <input type="name" name="name" value="">
+
+                                        <br>
+
+                                        <label for="topic"> Topico do assunto:</label>
+                                        <input type="text" name="topic" value="">
+
+                                        <br>
+                                        
+
+                                        <label for="message">Escreva sua mensagem:</label>
+                                        <br>
+                                        <textarea name="message" id="" cols="30" rows="10"></textarea>
+
+                                        <br>
+
+                                        <button type="submit">Enviar</button>
+                                        
+
+                                    </form>
+
+                        <div class="space"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== SUBSCRIBE ====================-->
+
+    </main>
+
+    <!--========== SCROLL UP ==========-->
+
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src=""></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="{{ url_for('static', filename= 'js/swiper-bundle.min.js') }}" ></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{{ url_for('static', filename= 'js/main.js') }}" ></script>
+</body>
+
+</html>
